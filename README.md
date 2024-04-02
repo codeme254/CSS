@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [CSS](#css)
+  - [CSS Syntax](#css-syntax)
+  - [CSS selectors](#css-selectors)
+    - [CSS element selector](#css-element-selector)
+    - [CSS id selector (#)](#css-id-selector-)
+    - [CSS class selector (.)](#css-class-selector-)
+    - [Universal selector](#universal-selector)
+    - [The CSS grouping selector](#the-css-grouping-selector)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # CSS
 CSS is the language used to style an HTML document.  
 CSS stands for Cascading Style Sheets.  
