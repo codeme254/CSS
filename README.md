@@ -14,6 +14,13 @@
     - [CSS class selector (.)](#css-class-selector-)
     - [Universal selector](#universal-selector)
     - [The CSS grouping selector](#the-css-grouping-selector)
+  - [CSS Colors](#css-colors)
+    - [Color names](#color-names)
+    - [Using Hex values](#using-hex-values)
+    - [Using rgb](#using-rgb)
+    - [Using hsl](#using-hsl)
+    - [using rgba](#using-rgba)
+    - [using hsla](#using-hsla)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -210,3 +217,64 @@ h1, h2, p {
     border: 3px solid red;
 }
 ```
+
+## CSS Colors
+Colors are defined using:
+- Predefined color names
+- rgb
+- hex
+- hsl
+- rgba
+- hsla
+
+### Color names
+A color can be specified by using a predefined color name.
+```css
+h1 {
+    color: red;
+}
+```
+### Using Hex values
+A hexadecimal color is specified with ```#RRGGBB```  where RR (red), GG(green) and BB(blue) hexadecimal integers specify the components of the color.  
+The highest is ff and lowest 00.
+```css
+h1 {
+    color: #ff6347;
+}
+/* 3 digits hex values */
+h2 {
+    color: #f2a;
+}
+```
+### Using rgb
+A color can be specified as an rgb value using the formula:
+```rgb(red, green, blue)```.  
+Each parameter (red, green, blue) defines the intensity of the color between 0 and 255.
+```css
+h1 {
+    color: rgb(255, 99, 71);
+}
+```
+### Using hsl
+Colors can also be specified using hue, saturation, andl lightness in the form ```hsl(hue, saturation, lightness)```.  
+```hue``` is the a degree on the color wheel from 0 to 360 where 0 is red, 120 is green and 240 is blue.  
+```saturation``` is a percentage value. 0% means a shade of gray and 100% is the full color.   
+```lightness``` is also a percentage where 0% is black, 50% is neither light or dark, 100% is white.
+```css
+h1 {
+    color: hsl(9, 100%, 64%);
+}
+```
+### using rgba
+rgba color values are an extension of the rgb color values with an alpha channel - which specifies the opacity for the color between 0 and 1.
+```css
+h1 {
+    color: rgba(255, 99, 71, 0.5);
+}
+```
+### using hsla
+hsla color values are an extension of the hsl color values with an alpha channel - which specifies the opacity for a color.
+```css
+h1 {
+    color: hsla(9, 100%, 64%, 0.5);
+}
