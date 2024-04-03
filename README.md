@@ -21,6 +21,15 @@
     - [Using hsl](#using-hsl)
     - [using rgba](#using-rgba)
     - [using hsla](#using-hsla)
+  - [CSS Backgrounds](#css-backgrounds)
+    - [CSS background-color](#css-background-color)
+    - [CSS background-image](#css-background-image)
+    - [CSS background-repeat](#css-background-repeat)
+      - [repeating horizontally](#repeating-horizontally)
+      - [repeating vertically](#repeating-vertically)
+      - [no-repeat](#no-repeat)
+    - [CSS background-position property](#css-background-position-property)
+    - [CSS background-attachment](#css-background-attachment)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -278,3 +287,73 @@ hsla color values are an extension of the hsl color values with an alpha channel
 h1 {
     color: hsla(9, 100%, 64%, 0.5);
 }
+```
+
+## CSS Backgrounds
+CSS backround properties are used to add background effects for elements.  
+The most common properties are:
+- background-color
+- background-image
+- background-repeat
+- background-attachment
+- background-position
+- background (shorthand property)
+
+### CSS background-color
+This property specifies the background-color of an element.  
+It can accept any valid color name, a hex value or an rgb value.  
+```css
+body {
+    background-color: red;
+}
+```
+### CSS background-image
+This property specifies an image to be used as the background of an element.  
+The path to the image is supplied in the ```url()```
+```css
+body {
+    background-image: url("world.png")
+}
+```
+### CSS background-repeat
+By default, the background image property repeats an image both horizontally and vertically.  
+Some images should be repeated only horizontally or only vertically or should not be repeated at all, else they will look strange.  
+#### repeating horizontally
+```css
+body {
+    background-image: url("world.jpeg");
+    background-repeat: repeat-x;
+}
+```
+#### repeating vertically
+```css
+body {
+    background-image: url("world.jpeg");
+    background-repeat: repeat-y;
+}
+```
+#### no-repeat
+```css
+body {
+    background-image: url("world.jpeg");
+    background-repeat: no-repeat;
+}
+```
+### CSS background-position property
+Used to specify the position of the background image.  
+For example center, right, top, left, e.t.c
+```css
+body {
+  background-image: url("world.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+```
+### CSS background-attachment
+This property specifies whether the image should scroll or be fixed (not scroll with the rest of the page).
+```css
+body {
+  background-image: url("img_tree.png");
+  background-attachment: fixed;
+}
+```
