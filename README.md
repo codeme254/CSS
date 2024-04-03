@@ -3,6 +3,10 @@
 **Table of Contents**
 
 - [CSS](#css)
+  - [How to add CSS](#how-to-add-css)
+    - [Inline CSS](#inline-css)
+    - [Internal CSS](#internal-css)
+    - [External CSS](#external-css)
   - [CSS Syntax](#css-syntax)
   - [CSS selectors](#css-selectors)
     - [CSS element selector](#css-element-selector)
@@ -18,6 +22,71 @@ CSS is the language used to style an HTML document.
 CSS stands for Cascading Style Sheets.  
 CSS was created by the World Wide Web Consortium (W3C).  
 CSS is used to define styles for your web pages including the design, layout, and variations in display for different devices and screen sizes.  
+
+## How to add CSS
+When a browser reads a stylesheet, it will format the related HTML document according to the information  provided in the style sheet.  
+There are three ways to insert CSS:
+- Inline CSS
+- Internal CSS
+- External CSS
+
+### Inline CSS
+To use inline styles, we add the style attribute to the html element we want to style. This attribute can contain any css property.
+
+```html
+<h1 style="color:blue; text-align:center;">Hello, World</h1>
+```
+
+### Internal CSS
+The internal style is defined inside the <style></style> tags inside the head section of the html document.
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+    background-color: linen;
+    }
+
+    h1 {
+    color: maroon;
+    margin-left: 40px;
+    }
+</style>
+</head>
+<body>
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+</body>
+</html>
+```
+
+### External CSS
+Create an external stylesheet and write all the CSS there, then include a reference to this CSS file inside of HTML.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+</body>
+</html>
+```
+and here is the styles.css file
+```css
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+```
 
 ## CSS Syntax
 A CSS rule consists of a selector and a declaration block.  
