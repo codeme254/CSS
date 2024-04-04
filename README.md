@@ -51,6 +51,24 @@
     - [outline-color](#outline-color)
     - [Outline shorthand](#outline-shorthand)
     - [outline-offset](#outline-offset)
+  - [CSS text](#css-text)
+    - [color](#color)
+    - [text alignment](#text-alignment)
+      - [text-align-last](#text-align-last)
+    - [text direction (direction property)](#text-direction-direction-property)
+    - [text decoration](#text-decoration)
+      - [text-decoration-line](#text-decoration-line)
+      - [text-decoration-color](#text-decoration-color)
+      - [text-decoration-style](#text-decoration-style)
+      - [specify the thickness of the decoration line](#specify-the-thickness-of-the-decoration-line)
+      - [the shorthand](#the-shorthand)
+    - [text transformation](#text-transformation)
+    - [text spacing](#text-spacing)
+      - [text-indent](#text-indent)
+      - [letter-spacing](#letter-spacing)
+      - [line-height](#line-height)
+      - [word-spacing](#word-spacing)
+    - [Text shadow](#text-shadow)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -669,5 +687,172 @@ p {
   border: 1px solid black;
   outline: 1px solid red;
   outline-offset: 15px;
+}
+```
+
+## CSS text
+CSS has a lot of properties for formatting text.
+### color
+The color property is used to set the color of text.
+```css
+.text {
+    color: blue;
+}
+```
+### text alignment
+The text-align property is used to set the horizontal alignment of text.  
+The accepted values are ```left, right, center or justify```.
+```css
+h1 {
+    text-align: center;
+}
+p {
+    text-align: left;
+}
+.text {
+    text-align: justify;
+}
+.h4 {
+    text-align: right;
+}
+```
+
+#### text-align-last
+This property specifies how to align the last line of a text.
+```css
+p {
+    text-align-last: left;
+}
+```
+### text direction (direction property)
+The direction and unicode-bidi properties can be used to change the text direction of an element.  
+```css
+p {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+```
+### text decoration
+#### text-decoration-line
+This property is used to add a decoration line to text.  
+The line can either be ```overline, line-through, underline```.
+```css
+h1 {
+  text-decoration-line: overline;
+}
+h2 {
+  text-decoration-line: line-through;
+}
+h3 {
+  text-decoration-line: underline;
+}
+p {
+  text-decoration-line: overline underline;
+}
+```
+
+#### text-decoration-color
+It is used to set the color of the decoration line
+```css
+h1 {
+  text-decoration-line: overline;
+  text-decoration-color: red;
+}
+```
+#### text-decoration-style
+Used to set the style of the decoration line. This can be ```solid, double, dotted, ridge, dashed, wavy```
+```css
+h1 {
+  text-decoration-line: overline;
+  text-decoration-color: red;
+  text-decoration-style: wavy;
+}
+```
+#### specify the thickness of the decoration line
+The text-decoration-thickness property is used to set the thickness of the decoration line.
+```css
+h1 {
+  text-decoration-line: overline;
+  text-decoration-color: red;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 10px;
+}
+```
+#### the shorthand
+The text-decoration property is shorthand for:
+- text-decoration-line (required)
+- text-decoration-color (optional)
+- text-decoration-style (optional)
+- text-decoration-thickness (optional)
+
+In that order
+```css
+p {
+  text-decoration: underline red double 5px;
+}
+```
+### text transformation
+Used to specify the uppercase and lowercase letters in a text.  
+Can be used to turn everything into uppercase or lowercase or capitalize the first letter of each word.
+
+```css
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+```
+### text spacing
+#### text-indent
+It is used to specify the indentation of the first line of text.
+```css
+p {
+    text-indent: 50px;
+}
+```
+#### letter-spacing
+This property is used to specify the space between the characters in a text.
+```css
+p {
+    letter-spacing: 8px;
+}
+```
+#### line-height
+This property specifies the space between lines.  
+Does not take any units.
+```css
+p {
+    line-height: 8;
+}
+```
+#### word-spacing
+Used to specify the space between words in a text.
+```css
+p {
+    word-spacing: 10px;
+}
+```
+### Text shadow
+The text-shadow property adds shadow to text.  
+In it's simplest form, you only specify the horizontal shadow and the vertical shadow respectively.  
+```css
+h1 {
+    text-shadow: 2px 3px;
+}
+```
+We can then add a color
+```css
+h1 {
+    text-shadow: 2px 3px red;
+}
+```
+We can then add a blur effect
+```css
+h1 {
+    text-shadow: 2px 3px 5px red;
 }
 ```

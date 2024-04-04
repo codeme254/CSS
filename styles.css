@@ -6,4 +6,24 @@ body{
 h1 {
     border-style: solid;
     border-width: medium;
+    text-shadow: 2px 3px 5px red;
+}
+
+p {
+    text-align: justify;
+    text-align-last: justify;
+    text-align-last: center;
+    text-align-last: right;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    line-height: 3;
+    text-decoration: underline overline;
+    text-decoration-color: red;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 8px;
+
+    text-decoration: underline overline red wavy 3px;
+    text-indent: 550px;
+    letter-spacing: 5px;
+    word-spacing: 10px;
 }
