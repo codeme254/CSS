@@ -39,6 +39,11 @@
     - [border-radius](#border-radius)
   - [CSS Margins](#css-margins)
   - [CSS padding](#css-padding)
+  - [CSS Height and Width](#css-height-and-width)
+    - [max-width](#max-width)
+    - [min-width](#min-width)
+    - [max-height](#max-height)
+    - [min-height](#min-height)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -533,5 +538,41 @@ If all the four sides have the same padding, we can pass one value which will re
 ```css
 #element {
   padding: 25px;
+}
+```
+## CSS Height and Width
+The height and width properties are used to set the height and width of an element.  
+```css
+#element {
+    height: 200px;
+    width: 50%;
+}
+```
+### max-width
+It is used to set the maximum width of an element (the element cannot have a width more than the max-width regardless of the amount of content).
+```css
+#element {
+    max-width: 500px;
+}
+```
+### min-width
+it is used to set the minimum width of an element. The element cannot shrink past this width.
+```css
+#element {
+    min-width: 200px;
+}
+```
+### max-height
+it is used to set the maximum height of an element, the element cannot grow vertically past this height.
+```css
+#element {
+    max-height: 500px;
+}
+```
+### min-height
+it is used to set the minimum height of an element. The element cannot shrink past this size.
+```css
+#element {
+    min-height: 500px;
 }
 ```
