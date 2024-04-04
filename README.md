@@ -38,6 +38,7 @@
     - [border shorthand property](#border-shorthand-property)
     - [border-radius](#border-radius)
   - [CSS Margins](#css-margins)
+  - [CSS padding](#css-padding)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -502,5 +503,35 @@ When we use the ```auto``` keyword on the horizontal, the element will be center
 ```css
 #element {
     margin: auto;
+}
+```
+
+## CSS padding
+Padding is used to create space around an element's content, inside any defined borders.  
+We can specify padding for each side of an element.  
+```css
+#element {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+```
+To shorten the code, we can specify all the properties in one padding property in a clockwise manner (top, right, bottom, left).
+```css
+#element {
+  padding: 25px 50px 75px 100px;
+}
+```
+We can shorten this further to pass only 2 values where the first value will represent the top and bottom padding and the second value will represent the left and right padding.  
+```css
+#element {
+  padding: 25px 50px;
+}
+```
+If all the four sides have the same padding, we can pass one value which will represent the padding on all the four sides.  
+```css
+#element {
+  padding: 25px;
 }
 ```
