@@ -37,6 +37,7 @@
     - [Individual border sides](#individual-border-sides)
     - [border shorthand property](#border-shorthand-property)
     - [border-radius](#border-radius)
+  - [CSS Margins](#css-margins)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -465,5 +466,41 @@ The border-radius property is used to add rounded borders to an element.
 ```css
 p {
     border-radius: 5px;
+}
+```
+
+## CSS Margins
+Margins are used to create space around elements, outside of any defined borders.
+```css
+#element{
+    margin: 30px;
+}
+```
+This will set a margin of 30 pixels to the top, right, bottom and left of the element.  
+You can also specify margin for each side of an element.
+```css
+#element{
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-bottom: 80px;
+    margin-left: 55px;
+}
+```
+To shorten the code, it is possible to specify all the margin properties in one property in a clockwise manner (top, right, bottom, left) using the margin property.
+```css
+#element {
+    margin: 20px 50px 80px 55px;
+}
+```
+We can shorten the code further by supplying two values where the first value will represent top and bottom margin and the second value will represent the left and right margin.
+```css
+#element {
+    margin: 20px 50px;
+}
+```
+When we use the ```auto``` keyword on the horizontal, the element will be centered horizontally within its container.
+```css
+#element {
+    margin: auto;
 }
 ```
