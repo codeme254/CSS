@@ -1,7 +1,9 @@
 
-
+body{
+    padding: 60px;
+}
 
 h1 {
-    color: red;
-    border: 3px solid green;
+    border-style: solid;
+    border-width: medium;
 }

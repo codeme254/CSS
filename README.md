@@ -30,6 +30,13 @@
       - [no-repeat](#no-repeat)
     - [CSS background-position property](#css-background-position-property)
     - [CSS background-attachment](#css-background-attachment)
+  - [CSS borders](#css-borders)
+    - [border-style](#border-style)
+    - [border-width](#border-width)
+    - [border-color](#border-color)
+    - [Individual border sides](#individual-border-sides)
+    - [border shorthand property](#border-shorthand-property)
+    - [border-radius](#border-radius)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -355,5 +362,108 @@ This property specifies whether the image should scroll or be fixed (not scroll 
 body {
   background-image: url("img_tree.png");
   background-attachment: fixed;
+}
+```
+
+## CSS borders
+The CSS border properties will allow you to specify the style, width and color of an element's border.
+
+### border-style
+Allows you to specify what kind of border to display.  
+- dotted - defines a dotted border.  
+- dashed - defines a dashed border.
+- solid - defines a solid border.
+- double - defines a double border.
+- groove - defines a 3D grooved border
+- ridge - defines a 3D ridged border.
+- inset - defines a 3D inset border.
+- outset - defines a 3D outset border.
+- none - defines no border.
+- hidden - defines a hidden border.
+
+The border-style property can have from one to four values for the top border, right border, bottom border and the left border respectively.
+
+```css
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+/* 4 values */
+p.mix {border-style: dotted dashed solid double;}
+```
+
+### border-width
+Specifies the width (thickness) of the four borders.  
+The width can be set as a specific size (px, pt, cm, em).  
+You can also pass one of the predefined values. (```thin, medium or thick```)
+```css
+.element1 {
+    border-style: solid;
+    border-width: 5px;
+}
+.element2 {
+    border-style: solid;
+    border-width: thick;
+}
+.element3 {
+    border-style: solid;
+    border-width: thin;
+}
+.element4 {
+    border-style: solid;
+    border-width: medium;
+}
+```
+### border-color
+This property sets the color of the four borders.
+```css
+.element {
+    border-style: solid;
+    border-color: red;
+}
+```
+
+### Individual border sides
+There are also properties for specifying each of the borders (top, right, bottom, left).  
+```css
+#element1 {
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: dashed;
+}
+```
+### border shorthand property
+It is possible to specify all the individual border properties in one property.  
+The border property is a shorthand for the following individual border properties.  
+- border-width
+- border-style
+- border-color  
+example
+```css
+#element1 {
+    border: 3px solid red;
+}
+```
+You can also specify these properties for just one side.  
+```css
+#element1 {
+    border-left: 3px solid red;
+    border-right: 3px solid green;
+    border-bottom: 3px solid purple;
+    border-top: 3px dashed yellow;
+}
+```
+### border-radius
+The border-radius property is used to add rounded borders to an element.  
+```css
+p {
+    border-radius: 5px;
 }
 ```
