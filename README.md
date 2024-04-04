@@ -44,6 +44,13 @@
     - [min-width](#min-width)
     - [max-height](#max-height)
     - [min-height](#min-height)
+  - [CSS Box Model](#css-box-model)
+  - [CSS Outline](#css-outline)
+    - [outline-style](#outline-style)
+    - [outline-width](#outline-width)
+    - [outline-color](#outline-color)
+    - [Outline shorthand](#outline-shorthand)
+    - [outline-offset](#outline-offset)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -574,5 +581,93 @@ it is used to set the minimum height of an element. The element cannot shrink pa
 ```css
 #element {
     min-height: 500px;
+}
+```
+
+## CSS Box Model
+The CSS box model is essentially a box that wraps around every element.  
+It consists of content, padding, borders and margins as shown in the image below.  
+![Box model illustration](./images/box-model.png)
+- **Content** - The content of the box, where text and images appear.
+- **Padding** - Clears and area around the content/an area around the content.
+- **Border** - The line that surrounds an element providing a visual boundary that can be customized in terms of style, width and color.
+- **Margin** - An area outside the defined borders of an element.
+
+## CSS Outline
+An outline is a line drawn outside the element's border to make the element stand out.  
+CSS has the following outline properties:
+- outline-style
+- outline-color
+- outline-width
+- outline-offset
+- outline
+
+### outline-style
+It specifies the style of the outline and it can have the following values:  
+- dotted - Defines a dotted outline
+- dashed - Defines a dashed outline
+- solid - Defines a solid outline
+- double - Defines a double outline
+- groove - Defines a 3D grooved outline
+- ridge - Defines a 3D ridged outline
+- inset - Defines a 3D inset outline
+- outset - Defines a 3D outset outline
+- none - Defines no outline
+- hidden - Defines a hidden outline
+```css
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+```
+### outline-width
+This property defines the width of the outline, and can have one of the following value:
+- thin
+- medium
+- thick
+- a specific value in px, cm, em e.t.c
+```css
+.element {
+    outline-style: solid;
+    outline-width: 5px;
+}
+.element2 {
+    outline-style: solid;
+    outline-width: thin;
+}
+```
+### outline-color
+It is used to set the color of the outline.
+```css
+.element {
+    outline-style: solid;
+    outline-width: 5px;
+    outline-color: red;
+}
+```
+### Outline shorthand
+It is used to set the following individual outline properties:
+- outline-width
+- outline-style
+- outline-color
+
+The properties are set in the order above.
+```css
+#element {
+    outline: thick ridge pink;
+}
+```
+### outline-offset
+It adds space between an outline and the edge/border of an element. This space is transparent.
+```css
+p {
+  margin: 30px;
+  border: 1px solid black;
+  outline: 1px solid red;
+  outline-offset: 15px;
 }
 ```
