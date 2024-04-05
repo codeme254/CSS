@@ -4,9 +4,7 @@ body{
 }
 
 h1 {
-    border-style: solid;
-    border-width: medium;
-    text-shadow: 2px 3px 5px red;
+    font-size: 5vw;
 }
 
 p {
@@ -26,4 +24,9 @@ p {
     text-indent: 550px;
     letter-spacing: 5px;
     word-spacing: 10px;
+
+}
+
+span {
+    font-variant: small-caps;
 }

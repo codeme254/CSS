@@ -69,6 +69,16 @@
       - [line-height](#line-height)
       - [word-spacing](#word-spacing)
     - [Text shadow](#text-shadow)
+  - [CSS Fonts](#css-fonts)
+    - [Generic font families](#generic-font-families)
+    - [CSS font-family property](#css-font-family-property)
+    - [Web Safe Fonts](#web-safe-fonts)
+    - [font-style](#font-style)
+    - [font-weight](#font-weight)
+    - [font-variant](#font-variant)
+    - [font-size](#font-size)
+      - [Setting font size with em](#setting-font-size-with-em)
+      - [Responsive font sizes](#responsive-font-sizes)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -854,5 +864,105 @@ We can then add a blur effect
 ```css
 h1 {
     text-shadow: 2px 3px 5px red;
+}
+```
+
+## CSS Fonts
+### Generic font families
+In CSS, there are five generic font families:
+1. **Serif** - they have a small stroke at the edges of each letter. They create a sense of formality and elegance.
+1. **Sans-Serif** - have clean lines (no small strokes attached). They create a modern and minimalistic look.
+1. **Monospace** - here all the letters have the same fixed width. They create a mechanical look. 
+1. **Cursive** - they look like human handwriting.
+1. **Fantasy** - they are decorative and playful fonts.
+![An image to differentiate Serif vs Sans serif](./images/serif-v-sansserif.png)
+
+### CSS font-family property
+In CSS, we use the font-family property to specify the font of a text.
+```css
+.parapgraph {
+    font-family: "Times New Roman", Times, Serif;
+}
+```
+Times New Roman is the font we want to use, Times and Serif are fallback fonts for systems that are not compatible with our Times New Roman font.
+
+### Web Safe Fonts
+These are fonts that are universally installed across all browsers and devices.  
+Here is a list of web safe fonts for HTML and CSS:  
+- BArial (sans-serif)
+- BVerdana (sans-serif)
+- BTahoma (sans-serif)
+- BTrebuchet MS (sans-serif)
+- BTimes New Roman (serif)
+- BGeorgia (serif)
+- BGaramond (serif)
+- BCourier New (monospace)
+- Brush Script MT (cursive)
+
+### font-style
+It is mostly used to specify italic text.  
+It has three values:  
+- normal: the text is shown normally.
+- italic: the text is shown in italics.
+- oblique: the text is shown in italic but a bit thicker.
+
+```css
+.paragraph {
+    font-style: italic;
+}
+.paragraph2 {
+    font-style: normal;
+}
+```
+### font-weight
+It specifies the weight of the font.
+```css
+.paragraph {
+    font-weight: normal;
+}
+.paragraph2 {
+    font-weight: bold;
+}
+```
+### font-variant
+Specifies whether or not a text should be displayed in a small-caps font.  
+In a small-caps font, all lowercase letters are converted to uppercase letters. However, the converted uppercase letters appears in a smaller font size than the original uppercase letters in the text.  
+
+### font-size
+It is used to set the size of the text.  
+```css
+.p {
+    font-size: 40px;
+}
+```
+#### Setting font size with em
+To allow users to resize the text (in browser menu), many users use em instead of pixels.  
+1em is equal to the current font size (16px).  
+```1em = 16px```  
+The size can be calculated from pixels to em using ```pixels/16```
+```css
+.p {
+    font-size: 2.5em; /* 40px/16 = 2.5em*/
+}
+```
+However, in older versions of some browsers like Internet Explorer, the text becomes larger thant it should be when made larger by the user or smaller than it should be when made smaller by the user.  
+The solution that works in all browsers is to set a default font-size in percent for the body element.
+```css
+body {
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+```
+And that solves the issue.
+
+#### Responsive font sizes
+The text size can be set with a ```vw``` unit which means the "viewport width". That way the text size will follow the size of the browser window.
+
+```css
+h1 {
+    font-size: 10vw;
 }
 ```
